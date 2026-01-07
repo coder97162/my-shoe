@@ -1,0 +1,127 @@
+.auth-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.auth-image-side {
+  flex: 1;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1600&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.auth-form-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.auth-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.auth-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.auth-form {
+  width: 100%;
+}
+
+.auth-field {
+  margin-bottom: 1.5rem;
+}
+
+.auth-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.auth-button:hover {
+  background-color: #333333;
+}
+
+.auth-button:active {
+  background-color: #1a1a1a;
+}
+
+.auth-meta {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.auth-link {
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-image-side {
+    display: none;
+  }
+  
+  .auth-form-side {
+    flex: 1;
+  }
+}
+
+

@@ -1,0 +1,29 @@
+-- Create Users table
+CREATE TABLE Users (
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+    Password VARCHAR(255) NOT NULL
+);
+
+-- Create Products table
+CREATE TABLE Products (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Category VARCHAR(255) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    ImageURL VARCHAR(500)
+);
+
+-- Create Orders table
+CREATE TABLE Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Status VARCHAR(50) NOT NULL DEFAULT 'Pending',
+    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID) ON DELETE CASCADE
+);
+
+
+
